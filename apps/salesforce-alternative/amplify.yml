@@ -13,7 +13,7 @@ applications:
             - cd apps/salesforce-alternative
             - pnpm run build
             - cp -r .next/static .next/standalone/apps/salesforce-alternative/.next/
-            - cp -r public .next/standalone/apps/salesforce-alternative/
+            - if [ -d "public" ]; then cp -r public .next/standalone/apps/salesforce-alternative/; fi
       artifacts:
         baseDirectory: .next/standalone/apps/salesforce-alternative
         files:
