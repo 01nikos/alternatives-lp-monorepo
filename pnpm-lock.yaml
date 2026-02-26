@@ -14,6 +14,15 @@ importers:
 
   apps/braze-alternative:
     dependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@repo/landing-sections':
+        specifier: workspace:*
+        version: link:../../packages/landing-sections
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       framer-motion:
         specifier: ^11.0.8
         version: 11.18.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -60,6 +69,15 @@ importers:
 
   apps/hubspot-alternative:
     dependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@repo/landing-sections':
+        specifier: workspace:*
+        version: link:../../packages/landing-sections
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       framer-motion:
         specifier: ^11.0.8
         version: 11.18.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -106,6 +124,15 @@ importers:
 
   apps/klaviyo-alternative:
     dependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@repo/landing-sections':
+        specifier: workspace:*
+        version: link:../../packages/landing-sections
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       framer-motion:
         specifier: ^11.0.8
         version: 11.18.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -152,6 +179,15 @@ importers:
 
   apps/salesforce-alternative:
     dependencies:
+      '@repo/config':
+        specifier: workspace:*
+        version: link:../../packages/config
+      '@repo/landing-sections':
+        specifier: workspace:*
+        version: link:../../packages/landing-sections
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       framer-motion:
         specifier: ^11.0.8
         version: 11.18.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
