@@ -1,0 +1,22 @@
+{
+  "name": "@repo/landing-sections",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./*": "./*"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "framer-motion": "^11.0.8",
+    "lucide-react": "^0.344.0",
+    "@repo/ui": "workspace:*",
+    "@repo/config": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.7.0"
+  }
+}
