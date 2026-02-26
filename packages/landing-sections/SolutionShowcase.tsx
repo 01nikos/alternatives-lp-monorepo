@@ -7,7 +7,7 @@ import { fadeInUp, staggerContainer } from "@repo/config";
 
 interface SolutionShowcaseProps {
   headline: string;
-  source: "klaviyo" | "braze";
+  source: "klaviyo" | "braze" | "hubspot" | "salesforce";
 }
 
 export function SolutionShowcase({ headline, source }: SolutionShowcaseProps) {

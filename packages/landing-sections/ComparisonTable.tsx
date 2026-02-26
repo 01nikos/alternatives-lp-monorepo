@@ -7,14 +7,16 @@ import { fadeInUp } from "@repo/config";
 
 interface ComparisonTableProps {
   headline: string;
-  competitor: "klaviyo" | "braze";
+  competitor: "klaviyo" | "braze" | "hubspot" | "salesforce";
 }
 
 export function ComparisonTable({ headline, competitor }: ComparisonTableProps) {
-  const data = competitor === "klaviyo"
-    ? {
-        col1: "Keep Klaviyo As-Is",
-        col2: "Migrate to Salesforce/Adobe",
+  const getData = () => {
+    switch (competitor) {
+      case "klaviyo":
+        return {
+          col1: "Keep Klaviyo As-Is",
+          col2: "Migrate to Salesforce/Adobe",
         rows: [
           {
             feature: "Cost",
@@ -60,10 +62,11 @@ export function ComparisonTable({ headline, competitor }: ComparisonTableProps) 
             col3: "48 hours"
           }
         ]
-      }
-    : {
-        col1: "Keep Tools As-Is",
-        col2: "Buy Braze",
+        };
+      case "braze":
+        return {
+          col1: "Keep Tools As-Is",
+          col2: "Buy Braze",
         rows: [
           {
             feature: "Cost",
@@ -106,7 +109,63 @@ export function ComparisonTable({ headline, competitor }: ComparisonTableProps) 
             col3: "48 hours"
           }
         ]
-      };
+        };
+      case "hubspot":
+      case "salesforce":
+      default:
+        return {
+          col1: "Keep Current Tools",
+          col2: "Enterprise Platform Migration",
+          rows: [
+            {
+              feature: "Cost",
+              col1: "Current spend",
+              col2: "$100K-$500K/year",
+              col3: "$999-$1,500/month"
+            },
+            {
+              feature: "Agentic Intelligence",
+              col1: false,
+              col2: true,
+              col3: true,
+              col1Text: "Manual workflows",
+              col2Text: "Built-in",
+              col3Text: "AI layer on top"
+            },
+            {
+              feature: "Cross-tool Coordination",
+              col1: false,
+              col2: true,
+              col3: true,
+              col1Text: "Siloed",
+              col2Text: "Native",
+              col3Text: "Via Phleid"
+            },
+            {
+              feature: "Migration Required",
+              col1: "N/A",
+              col2: "6-12 months",
+              col3: false,
+              col3Text: "Zero (keep all tools)"
+            },
+            {
+              feature: "Risk",
+              col1: "Falling behind",
+              col2: "Massive disruption",
+              col3: "None"
+            },
+            {
+              feature: "Time to Value",
+              col1: "N/A",
+              col2: "6-12 months",
+              col3: "48 hours"
+            }
+          ]
+        };
+    }
+  };
+
+  const data = getData();
 
   return (
     <section className="py-16 sm:py-24">

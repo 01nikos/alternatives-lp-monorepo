@@ -9,7 +9,7 @@ import { fadeInUp } from "@repo/config";
 interface LeadCaptureFormProps {
   headline: string;
   subheadline: string;
-  source: "klaviyo" | "braze";
+  source: "klaviyo" | "braze" | "hubspot" | "salesforce";
   placement: "hero" | "pain-points" | "footer";
   showExampleReport?: boolean;
 }
