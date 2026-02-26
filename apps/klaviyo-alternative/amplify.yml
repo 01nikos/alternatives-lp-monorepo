@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install -g pnpm@9.0.0
+        - pnpm install
+    build:
+      commands:
+        - pnpm run build --filter=klaviyo-alternative
+  artifacts:
+    baseDirectory: apps/klaviyo-alternative/.next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - apps/klaviyo-alternative/.next/cache/**/*

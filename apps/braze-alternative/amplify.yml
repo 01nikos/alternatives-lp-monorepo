@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install -g pnpm@9.0.0
+        - pnpm install
+    build:
+      commands:
+        - pnpm run build --filter=braze-alternative
+  artifacts:
+    baseDirectory: apps/braze-alternative/.next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - apps/braze-alternative/.next/cache/**/*
