@@ -8,6 +8,10 @@
     "lint": "turbo run lint",
     "clean": "turbo run clean"
   },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.7",
+    "resend": "^3.2.0"
+  },
   "devDependencies": {
     "turbo": "^2.0.0"
   },

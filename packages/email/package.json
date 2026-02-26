@@ -1,0 +1,10 @@
+{
+  "name": "@repo/email",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./resend.ts",
+  "types": "./resend.ts",
+  "dependencies": {
+    "resend": "^3.2.0"
+  }
+}
