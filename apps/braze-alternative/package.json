@@ -16,7 +16,9 @@
     "lucide-react": "^0.344.0",
     "@repo/landing-sections": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@repo/config": "workspace:*"
+    "@repo/config": "workspace:*",
+    "@repo/database": "workspace:*",
+    "@repo/email": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.0",

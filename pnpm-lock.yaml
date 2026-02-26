@@ -24,6 +24,12 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../../packages/database
+      '@repo/email':
+        specifier: workspace:*
+        version: link:../../packages/email
       '@repo/landing-sections':
         specifier: workspace:*
         version: link:../../packages/landing-sections
@@ -79,6 +85,12 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../../packages/database
+      '@repo/email':
+        specifier: workspace:*
+        version: link:../../packages/email
       '@repo/landing-sections':
         specifier: workspace:*
         version: link:../../packages/landing-sections
@@ -134,6 +146,12 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../../packages/database
+      '@repo/email':
+        specifier: workspace:*
+        version: link:../../packages/email
       '@repo/landing-sections':
         specifier: workspace:*
         version: link:../../packages/landing-sections
@@ -189,6 +207,12 @@ importers:
       '@repo/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../../packages/database
+      '@repo/email':
+        specifier: workspace:*
+        version: link:../../packages/email
       '@repo/landing-sections':
         specifier: workspace:*
         version: link:../../packages/landing-sections
@@ -246,12 +270,20 @@ importers:
       '@supabase/supabase-js':
         specifier: ^2.39.7
         version: 2.97.0
+    devDependencies:
+      typescript:
+        specifier: ^5.7.0
+        version: 5.9.3
 
   packages/email:
     dependencies:
       resend:
         specifier: ^3.2.0
         version: 3.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    devDependencies:
+      typescript:
+        specifier: ^5.7.0
+        version: 5.9.3
 
   packages/landing-sections:
     dependencies:

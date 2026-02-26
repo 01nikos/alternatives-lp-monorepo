@@ -2,9 +2,16 @@
   "name": "@repo/database",
   "version": "0.0.0",
   "private": true,
-  "main": "./supabase.ts",
-  "types": "./supabase.ts",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./*": "./*"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
   }
 }
