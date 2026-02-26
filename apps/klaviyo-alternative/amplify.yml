@@ -12,8 +12,10 @@ applications:
           commands:
             - cd apps/klaviyo-alternative
             - pnpm run build
+            - cp -r .next/static .next/standalone/apps/klaviyo-alternative/.next/
+            - cp -r public .next/standalone/apps/klaviyo-alternative/
       artifacts:
-        baseDirectory: .next
+        baseDirectory: .next/standalone/apps/klaviyo-alternative
         files:
           - '**/*'
       cache:

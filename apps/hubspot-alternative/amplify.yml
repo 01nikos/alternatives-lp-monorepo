@@ -12,8 +12,10 @@ applications:
           commands:
             - cd apps/hubspot-alternative
             - pnpm run build
+            - cp -r .next/static .next/standalone/apps/hubspot-alternative/.next/
+            - cp -r public .next/standalone/apps/hubspot-alternative/
       artifacts:
-        baseDirectory: .next
+        baseDirectory: .next/standalone/apps/hubspot-alternative
         files:
           - '**/*'
       cache:

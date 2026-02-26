@@ -12,8 +12,10 @@ applications:
           commands:
             - cd apps/braze-alternative
             - pnpm run build
+            - cp -r .next/static .next/standalone/apps/braze-alternative/.next/
+            - cp -r public .next/standalone/apps/braze-alternative/
       artifacts:
-        baseDirectory: .next
+        baseDirectory: .next/standalone/apps/braze-alternative
         files:
           - '**/*'
       cache:
